@@ -16,3 +16,6 @@ app.use("/tasks", tasks);
 app.listen(port, () => {
   console.log(`[server]: Server is running at http://localhost:${port}`);
 });
+
+// Export the Express API
+module.exports = app;
