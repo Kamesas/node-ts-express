@@ -1,15 +1,6 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "dist/index.js",
-      "use": "@now/node"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "dist/index.js"
-    }
-  ]
+  "name": "music-album",
+  "builds": [{ "src": "dist/index.js.js", "use": "@vercel/node" }],
+  "routes": [{ "src": "/(.*)", "dest": "/dist/index.js" }]
 }
