@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 var app: Express = express();
-app.get("/", (req: Request, res: Response) => {
+app.get("/home", (req: Request, res: Response) => {
   res.send("hello upd");
 });
 
