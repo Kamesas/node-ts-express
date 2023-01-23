@@ -8,11 +8,12 @@ const dotenv_1 = __importDefault(require("dotenv"));
 const todo_1 = require("./components/todo");
 dotenv_1.default.config();
 var app = (0, express_1.default)();
+app.use(express_1.default.json());
 app.get("/", (req, res) => {
     res.send("Node ts rest api");
 });
 const port = process.env.PORT;
-app.use("/todo", todo_1.todoRouter);
+app.use("/api/todo", todo_1.todoRouter);
 app.listen(port, () => {
     console.log(`[server]: Server is running at http://localhost:${port}`);
 });
